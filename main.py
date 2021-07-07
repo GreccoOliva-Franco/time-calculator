@@ -1,0 +1,66 @@
+# This entrypoint file to be used in development. Start by reading README.md
+from time_calculator import add_time
+from unittest import main
+
+def a():
+	print("---------------------------")
+
+TEST = False
+
+if TEST == True:
+	print('add_time("3:30 PM", "2:12")')
+	print(add_time("3:30 PM", "2:12"))
+	print("5:42 PM")
+	a()
+	print('add_time("11:55 AM", "3:12")')
+	print(add_time("11:55 AM", "3:12"))
+	print("3:07 PM")
+	a()
+	print('add_time("9:15 PM", "5:30")')
+	print(add_time("9:15 PM", "5:30"))
+	print("2:45 AM (next day)")
+	a()
+	print('add_time("11:40 AM", "0:25")')
+	print(add_time("11:40 AM", "0:25"))
+	print("12:05 PM")
+	a()
+	print('add_time("2:59 AM", "24:00")')
+	print(add_time("2:59 AM", "24:00"))
+	print("2:59 AM (next day)")
+	a()
+	print('add_time("11:59 PM", "24:05")')
+	print(add_time("11:59 PM", "24:05"))
+	print("12:04 AM (2 days later)")
+	a()
+	print('add_time("8:16 PM", "466:02"')
+	print(add_time("8:16 PM", "466:02"))
+	print("6:18 AM (20 days later)")
+	a()
+	print('add_time("5:01 AM", "0:00")')
+	print(add_time("5:01 AM", "0:00"))
+	print("5:01 AM")
+	a()
+	print('add_time("3:30 PM", "2:12", "Monday"')
+	print(add_time("3:30 PM", "2:12", "Monday"))
+	print("5:42 PM, Monday")
+	a()
+	print('add_time("2:59 AM", "24:00", "saturDay"')
+	print(add_time("2:59 AM", "24:00", "saturDay"))
+	print("2:59 AM, Sunday (next day)")
+	a()
+	print('add_time("11:59 PM", "24:05", "Wednesday"')
+	print(add_time("11:59 PM", "24:05", "Wednesday"))
+	print("12:04 AM, Friday (2 days later)")
+	a()
+	print('add_time("8:16 PM", "466:02", "tuesday")')
+	print(add_time("8:16 PM", "466:02", "tuesday"))
+	print("6:18 AM, Monday (20 days later)")
+	a()
+
+
+# print(add_time("11:59 PM", "24:05"))
+# print(add_time("3:30 PM", "2:12", "Monday"))
+# print(add_time("2:59 AM", "24:00", "saturDay"))
+# print(add_time("8:16 PM", "466:02", "tuesday"))
+# Run unit tests automatically
+main(module='test_module', exit=False)
